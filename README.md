@@ -14,6 +14,3 @@ Quick summary:
 4) execute "flask run"
 5) follow link to explore the website!
 
-Passwords: 
-1) password for knitter log in page: KnitByCC123!
-2) information to access my knitter profile: Username: Caroline; Password: Berryline123!
