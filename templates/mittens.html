@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Mittens
+{% endblock %}
+
+{% block main %}
+<div class="row">
+  <div class="shop-col-3">
+      <!--Help with bootstrap's carousel documentation from W3 Schools-->
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Preview of which slides being viewed -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+          </ol>
+          <!-- Slide images, one must be active for slideshow to begin -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="static/images/Mittens.jpg" alt="Mulitcolored pastel mittens">
+            </div>
+            <div class="item">
+              <img src="static/images/MensMittens.jpg" alt="Navy blue mens mittens">
+            </div>
+          </div>
+          <!--buttons to move left and right-->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Back</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+  </div>
+  <div class="col-2">
+    <h1>
+      Mittens
+    </h1>
+    <p>
+      Nothing is better than a cozy pair of mittens to keep you happy and warm through the cold winter months! 
+    </p>
+    <h2>
+      Order Information
+    </h2>
+    <p>
+      Input your requested color, and select your size. 
+    </p>
+    <form action="/mittens" method="post">
+      <div class="form-group row">
+        <div class="form-group col-md-6">
+          <label for="Color1">Color: </label>
+          <input type="text" class="form-control" name="Color1" id="Color1" placeholder="Color 1">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Size">Size: </label>
+            <select class="form-control" name="Size" id="Size">
+                <option selected="true" disabled="disabled">Select Size</option>
+                <option value="Men's Small">Men's Small</option>
+                <option value="Men's Medium">Men's Medium</option>
+                <option value="Men's Large">Men's Large</option>
+                <option value="Women's Small">Women's Small</option>
+                <option value="Women's Medium">Women's Medium</option>
+                <option value="Women's Large">Women's Large</option>
+              </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="form-group col-md-6">
+          <label for="Quantity">Quantity: </label>
+          <input type="number" min="1" class="form-control" name="Quantity" id="Quantity" placeholder="Quantity">
+        </div>
+        <div class="form-group col-md-6">
+          </div>
+      </div>
+      <div class="form-group row">
+        <div class="form-group col-md-6">
+          <button type="submit" class="button">Order</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

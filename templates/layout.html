@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="/static/style.css" rel="stylesheet">
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <div class = "navbar">
+            <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/index"><img src="static/images/Needles.png" height="30"/></a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/store">Shop</a></li>
+                        <li><a href="/aboutus">About Us</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span>  Log In</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span>  Log Out</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/cart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="container">
+        {% for message in get_flashed_messages() %}
+            <div class="alert alert-info">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ message }}
+            </div>
+        {% endfor %}
+        </div>
+        <main class="container-fluid py-5 text-center">
+            {% block main %}{% endblock %}
+        </main>
+        <div class="footer">
+            <div class="row">
+                <div class="footer-col-3">
+                    <h3>Links</h3>
+                        <a href="/aboutus">About Us</a><br>
+                        <a href="/store">Store</a><br>
+                        <a href="/knitterlocked">Knitter Log In</a><br>
+                        <a href="/contactus">Contact Us</a><br>
+                </div>
+                <div class="footer-col-3">
+                    <img src="static/images/KnitByCC.png" height="100px">
+                    <p>Made by us, for you.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Follow Us</h3>
+                        <a href="https://www.instagram.com/knit.by.cc/">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Dog Sweaters
+{% endblock %}
+
+{% block main %}
+<div class="row">
+  <div class="shop-col-3">
+      <!--Help with bootstrap's carousel documentation from W3 Schools-->
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Preview of which slides being viewed -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <!-- Slide images, one must be active for slideshow to begin -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="static/images/dogsweaters.jpg" alt="Maisy in a pink and tan varieted sweater">
+            </div>
+            <div class="item">
+              <img src="static/images/MaisyAutumnSweater.jpg" alt="Maisy in a cream and crimson sweater">
+            </div>
+            <div class="item">
+              <img src="static/images/LunaPinkSweater.jpg" alt="Luna modeling our pink and tan varieted sweater">
+            </div>
+          </div>
+          <!--buttons to move left and right-->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Back</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+  </div>
+  <div class="col-2">
+    <h1>
+      Dog Sweaters
+    </h1>
+    <p>
+      Perfect to keep your furry friend fashionable and warm on the chilliest days! Our dog sweaters are comfortable, cheerful, and made to fit your dog.<br>
+    </p>
+    <h2>
+      Order Information
+    </h2>
+    <p>
+      Select up to two colors, and input your dog's measurements (information on how to measure your dog <a href="https://dogfatherandco.com/how-to-measure-your-dog/">here</a>).
+    </p>
+    <form action="/dogsweaters" method="post">
+      <div class="form-group row">
+        <div class="form-group col-md-6">
+          <label for="Color1">Primary Color: </label>
+          <input type="text" class="form-control" name="Color1" id="Color1" placeholder="Color 1">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="Color2">Secondary Color: </label>
+          <input type="text" class="form-control" name="Color2" id="Color2" placeholder="Color 2">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="form-group col-md-6">
+          <label for="Neck">Neck (in): </label>
+          <input type="number" min="1" class="form-control" name="Neck" id="Neck" placeholder="Neck (in)">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="Neck">Body Length (in): </label>
+          <input type="number" min="1" class="form-control" name="BodyLength" id="BodyLength" placeholder="Body Length (in)">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="form-group col-md-6">
+          <label for="Chest">Chest (in): </label>
+          <input type="number" min="1" class="form-control" name="Chest" id="Chest" placeholder="Chest (in)">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="Quantity">Quantity: </label>
+          <input type="number" min="1" class="form-control" name="Quantity" id="Quantity" placeholder="Quantity">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="form-group col-md-6">
+          <button type="submit" class="button">Order</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

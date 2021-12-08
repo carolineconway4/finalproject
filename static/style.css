@@ -1,0 +1,206 @@
+.navbar-custom {
+    background-color: #F98B88;
+    color: black;
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.row {
+    display: flex; 
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+    text-align: center;
+    color: #F98B88
+}
+
+.col-2 h1 {
+    color: #F98B88;
+    font-family: Verdana;
+    font-size: 60px;
+}
+
+.col-2 p {
+    font-family: Verdana;
+    font-style: italic;
+    color: black;
+    font-size: 20px;
+}
+
+.col-2 img {
+    max-width: 100%;
+}
+
+.button {
+    background-color: #F98B88;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 12px;
+    margin: 40px;
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: white;
+}
+
+.favorites .row {
+    margin: auto;
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    max-width: 1080px;
+}
+
+.col-3 {
+    flex-basis: 30%;
+    min-width: 200px;
+    text-align: center;
+    padding: 10px;
+    background: #F98B88;
+    color: white;
+    transition: transform 0.5s;
+}
+
+.col-3 img {
+    max-width: 100%;
+}
+
+.col-3:hover {
+    transform: translateY(-10px);
+}
+
+.favorites h2 {
+    color: #F98B88;
+    font-family: Verdana;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.favorites h1 {
+    color: white;
+    font-family: Verdana;
+    font-size: 30px;
+    text-align: center;
+}
+
+.favorites p {
+    color: white;
+    font-family: Verdana;
+    font-size: 15px;
+    text-align: center;
+}
+
+.meetme .row {
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 1080px;
+}
+
+.meetme .col-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.meetme img {
+    max-width: 100%;
+}
+
+.meetme h1 {
+    color: #F98B88;
+    font-family: Verdana;
+    font-size: 38px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.meetme h2 {
+    color: #F98B88;
+    font-family: Verdana;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.footer {
+    background: #F98B88;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.footer-col-3 {
+    flex-basis: 30%;
+    min-width: 200px;
+    padding: 10px;
+    background: #F98B88;
+}
+
+.footer a {
+    color: white;
+    font-family: Verdana;
+    font-size: 18px;
+}
+
+.footer p {
+    color: white;
+    font-family: Verdana;
+    font-size: 18px;
+}
+
+.footer h3 {
+    color: gray;
+    font-family: Verdana;
+    font-size: 22px;
+}
+
+.footer img {
+    padding-bottom: 10px;
+}
+
+.shop-col-3 {
+    flex-basis: 30%;
+    min-width: 200px;
+    text-align: center;
+    padding: 10px;
+    background: #F98B88;
+    color: white;
+}
+
+form {
+    padding-top: 20px;
+}
+
+th {
+    color: #F98B88;
+    font-family: Verdana;
+    font-size: 20px;
+}
+
+td {
+    font-family: Verdana;
+    font-size: 18px;
+}

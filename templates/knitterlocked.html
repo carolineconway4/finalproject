@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Knitter Log In
+{% endblock %}
+
+{% block main %}
+<div class="col-2">
+    <h2>
+        Knitter Log In
+    </h2>
+</div>
+<div class="center">
+    <form action="/knitterlocked" method="post">
+        <div class="row">
+            <div class="form-row align-items-center">
+                <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-row align-items-center">
+                <button class="button" type="submit">Knitter Log In</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="col-2">
+    <h2>
+        Looking for the customer sign-in page?
+    </h2>
+</div>
+<div class="center">
+    <div class="row">
+        <a href="/login" class="button">Customer Log In</a>
+    </div>
+</div>
+{% endblock %}

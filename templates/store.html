@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    All Products
+{% endblock %}
+
+{% block main %}
+        <container class="favorites">
+            <h2>All Products</h2>
+            <div class="row">
+                <div class="col-3">
+                    <a href="/dogsweaters">
+                        <img src="static/images/dogsweaters.jpg">
+                    </a>
+                        <h1>Dog Sweaters</h1>
+                        <p>From $60.00</p>
+                </div>
+                <div class="col-3">
+                    <a href="/mittens">
+                        <img src="static/images/Mittens.jpg">
+                    </a>
+                        <h1>Mittens</h1>
+                        <p>From $30.00</p>
+                </div>
+                <div class="col-3">
+                    <a href="/blankets">
+                        <img src="static/images/Blankets.jpg">
+                    </a>
+                    <h1>Chunky Blankets</p>
+                    <p>From $100.00</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <a href="/hats">
+                        <img src="static/images/hats.jpg">
+                    </a>
+                    <h1>Collegiate Hats</p>
+                    <p>From $25.00</p>
+                </div>
+                <div class="col-3">
+                    <a href="/sweaters">
+                        <img src="static/images/Sweater.jpg">
+                    </a>
+                    <h1>Sweaters</p>
+                    <p>From $115.00</p>
+                </div>
+            </div>
+        </container>
+{% endblock %}

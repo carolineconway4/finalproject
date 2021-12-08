@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Knit By CC | A Knitting Collective
+{% endblock %}
+
+{% block main %}
+        <div class="row">
+            <div class="col-2">
+                <h1>Made by us, for you.</h1>
+                <img src="static/images/KnitByCC.png" height="250px">
+                <p>Homemade knits without sky high prices. Perfect for holiday gifts,<br>housewarming presents, and to show your school sprit!</p>
+                <a href="/aboutus" class="button">About Us</a>
+            </div>
+            <div class="col-2">
+                <img src="static/images/HarvardYale.jpg">
+            </div>
+        </div>
+        <container class="favorites">
+            <h2>Our Favorites</h2>
+            <div class="row">
+                <div class="col-3">
+                    <a href="/blankets">
+                        <img src="static/images/Blankets.jpg">
+                    </a>
+                    <h1>Chunky Blankets</p>
+                    <p>From $100.00</p>
+                </div>
+                <div class="col-3">
+                    <a href="/hats">
+                        <img src="static/images/hats.jpg">
+                    </a>
+                    <h1>Collegiate Hats</p>
+                    <p>From $25.00</p>
+                </div>
+                <div class="col-3">
+                    <a href="/sweaters">
+                        <img src="static/images/Sweater.jpg">
+                    </a>
+                    <h1>Sweaters</p>
+                    <p>From $115.00</p>
+                </div>
+            </div>
+        </container>
+        <container class="meetme">
+            <h2>Meet the Founder</h2>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Caroline Conway</h1>
+                    <p>Hello! I'm Caroline, the founder of Knit By CC. Over the pandemic, my friends and I were searching for safe ways to spend the time, and we turned to knitting together on our porches. The act of working on a collective project brought a sense of community and comfort to us when we needed it most, and we would love to share this joy with others through Knit By CC.
+                </div>
+                <div class="col-2">
+                    <img src="static/images/Caroline.jpg">
+                </div>
+            </div>
+        </container>
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Collegiate Hats
+{% endblock %}
+
+{% block main %}
+<div class="row">
+  <div class="shop-col-3">
+      <!--Help with bootstrap's carousel documentation from W3 Schools-->
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Preview of which slides being viewed -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <!-- Slide images, one must be active for slideshow to begin -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="static/images/hats.jpg" alt="Three Harvard hats">
+            </div>
+            <div class="item">
+              <img src="static/images/HarvardYale.jpg" alt="Four friends wearing Harvard hats at the Harvard Yale game">
+            </div>
+            <div class="item">
+              <img src="static/images/AHat.jpg" alt="Young boy wearing Harvard hat">
+            </div>
+          </div>
+          <!--buttons to move left and right-->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Back</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+  </div>
+  <div class="col-2">
+    <h1>
+      Collegiate Hats
+    </h1>
+    <p>
+      These hats are a great way to show your school spirit! Perfect for tailgates, gifts, or just for fun!
+    </p>
+    <h2>
+      Order Information
+    </h2>
+    <p>
+      Select up to two colors, and input your school.
+    </p>
+    <form action="/hats" method="post">
+      <div class="form-group row">
+        <div class="form-group col-md-6">
+          <label for="Color1">Primary Color: </label>
+          <input type="text" class="form-control" name="Color1" id="Color1" placeholder="Color 1">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="Color2">Secondary Color: </label>
+          <input type="text" class="form-control" name="Color2" id="Color2" placeholder="Color 2">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="form-group col-md-6">
+          <label for="Neck">School: </label>
+          <input type="text" class="form-control" name="School" id="School" placeholder="School">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Size">Size: </label>
+            <select class="form-control" name="Size" id="Size">
+                <option selected="true" disabled="disabled">Select Size</option>
+                <option value="Youth (5-7)">Youth (5-7 yrs)</option>
+                <option value="Youth (7-12)">Youth (7-12)</option>
+                <option value="Adult (Women)">Adult (Women)</option>
+                <option value="Adult (Men)">Adult (Men)</option>
+            </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="form-group col-md-6">
+          <label for="Quantity">Quantity: </label>
+          <input type="number" min="1" class="form-control" name="Quantity" id="Quantity" placeholder="Quantity">
+        </div>
+        <div class="form-group col-md-6">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="form-group col-md-6">
+          <button type="submit" class="button">Order</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

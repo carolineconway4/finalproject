@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My Projects
+{% endblock %}
+
+{% block main %}
+
+<div class="col-2">
+    <h2>
+        New Projects
+    </h2>
+</div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Description</th>
+                <th>Total Price</th>
+                <th>Customer Email</th>
+                <th>Accept Project?</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in new_projects %}
+                <tr>
+                    <td>{{ row.item }}</td>
+                    <td>{{ row.quantity }}</td>
+                    <td>{{ row.description }}</td>
+                    <td>{{ row.price | usd }}</td>
+                    <td>{{ row.email }}</td>
+                    <form action="/accept" method="post">
+                        <input type="hidden" id="{{ row.key }}" name="Row_Accept" value="{{ row.id }}">
+                        <td><button type="submit" name="Accept" class="button"> Accept Project </button></td>
+                    </form>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="col-2">
+        <h2>
+            My Projects
+        </h2>
+    </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Description</th>
+                    <th>Total Price</th>
+                    <th>Customer Email</th>
+                    <th>Finish Project?</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in my_projects %}
+                    <tr>
+                        <td>{{ row.item }}</td>
+                        <td>{{ row.quantity }}</td>
+                        <td>{{ row.description }}</td>
+                        <td>{{ row.price | usd }}</td>
+                        <td>{{ row.email }}</td>
+                        <form action="/complete" method="post">
+                            <input type="hidden" id="{{ row.key }}" name="Row_Complete" value="{{ row.id }}">
+                            <td><button type="submit" name="Complete" class="button"> Complete Project </button></td>
+                        </form>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}

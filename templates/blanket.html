@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Blankets
+{% endblock %}
+
+{% block main %}
+<div class="row">
+  <div class="shop-col-3">
+      <!--Help with bootstrap's carousel documentation from W3 Schools-->
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Preview of which slides being viewed -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+          </ol>
+          <!-- Slide images, one must be active for slideshow to begin -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="static/images/Blankets.jpg" alt="Mulitcolored pastel blanket">
+            </div>
+            <div class="item">
+              <img src="static/images/BedBlanket.jpg" alt="Tan blanket on bed">
+            </div>
+            <div class="item">
+                <img src="static/images/CloseBlanket.jpg" alt="Close view of tan blanket">
+            </div>
+            <div class="item">
+                <img src="static/images/ChairBlanket.jpg" alt="Light blue blanket on black and white spotted chair">
+            </div>
+          </div>
+          <!--buttons to move left and right-->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Back</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+  </div>
+  <div class="col-2">
+    <h1>
+      Chunky-Knit Blankets
+    </h1>
+    <p>
+      These blankets look incredible in living rooms, bedrooms, college dorms - and they are every bit as cozy as they look!
+    </p>
+    <h2>
+      Order Information
+    </h2>
+    <p>
+      Input your requested color, and select the size of your blanket. 
+    </p>
+    <form action="/blankets" method="post">
+      <div class="form-group row">
+        <div class="form-group col-md-6">
+          <label for="Color1">Color: </label>
+          <input type="text" class="form-control" name="Color1" id="Color1" placeholder="Color 1">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Size">Size: </label>
+            <select class="form-control" name="Size" id="Size">
+                <option selected="true" disabled="disabled">Select Size</option>
+                <option value="Twin">Twin ($100)</option>
+                <option value="Queen">Queen ($150)</option>
+                <option value="King">King ($200)</option>
+              </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="form-group col-md-6">
+          <label for="Quantity">Quantity: </label>
+          <input type="number" min="1" class="form-control" name="Quantity" id="Quantity" placeholder="Quantity">
+        </div>
+        <div class="form-group col-md-6">
+          </div>
+      </div>
+      <div class="form-group row">
+        <div class="form-group col-md-6">
+          <button type="submit" class="button">Order</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

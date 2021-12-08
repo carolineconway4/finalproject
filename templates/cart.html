@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Cart
+{% endblock %}
+
+{% block main %}
+
+<div class="col-2">
+    <h2>
+        Cart
+    </h2>
+</div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Description</th>
+                <th>Total Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in cart %}
+                <tr>
+                    <td>{{ row.item }}</td>
+                    <td>{{ row.quantity }}</td>
+                    <td>{{ row.description }}</td>
+                    <td>{{ row.price | usd }}</td>
+                    <form action="/delete" method="post">
+                        <input type="hidden" id="{{ row.key }}" name="Row_Delete" value="{{ row.key }}">
+                        <td><button type="submit" name="Delete" class="btn btn-default btn-sm">
+                            <span class="glyphicon glyphicon-trash"></span> Delete </button></td>
+                    </form>
+                </tr>
+            {% endfor %}
+                <tr>
+                    <td>TOTAL</td>
+                    <td colspan="2"></td>
+                    <td>{{ total_price | usd }}</td>
+                    <td></td>
+
+        </tbody>
+    </table>
+<div class="col-2">
+    <div class="center">
+        <div class="row">
+            <form action="/cart" method="post">
+                <button class="button" type="submit" name="checkout">Check Out</button>
+            </form>
+        </div>
+        <div class="row">
+            <p>
+                No payment is due at time of check out - checking out sends your commission to our knitters, which they will accept within 24 hrs. Once a knitter accepts your commission, you will receive more details on the project and payment via email.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
